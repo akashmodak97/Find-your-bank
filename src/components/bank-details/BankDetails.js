@@ -47,14 +47,13 @@ const BankDetails = ({ setDataLoading, setErrorOccurred }) => {
 	const removeFavorite = () => {
 		setIsFavorite(false);
 		const favoriteDataFromStorage = getDataIfExistsInLocalStorage("favorites");
-		console.log(favoriteDataFromStorage);
+
 		if (!favoriteDataFromStorage) return;
 
 		const updatedData = favoriteDataFromStorage.value.filter((data) => {
 			if (data.ifsc !== ifscCode) return data;
 			return false;
 		});
-		console.log(updatedData);
 		storeDataInLocalStorage("favorites", updatedData);
 	};
 

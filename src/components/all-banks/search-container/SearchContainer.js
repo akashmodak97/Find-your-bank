@@ -40,7 +40,6 @@ const SearchContainer = ({
 
 		clearTimeout(typingSensor.current);
 		typingSensor.current = setTimeout(() => {
-			console.log(value);
 			searchData(value);
 		}, 500);
 	};

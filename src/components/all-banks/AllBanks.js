@@ -44,13 +44,6 @@ const AllBanks = ({ setDataLoading, setErrorOccurred }) => {
 		}
 	};
 
-	const numberOfRowsPerPage = () => {
-		const startIndex =
-			firstBank - noOfDataToShow <= 0 ? 0 : firstBank - noOfDataToShow;
-		const endIndex = startIndex + noOfDataToShow;
-		return endIndex - startIndex;
-	};
-
 	const findLastIndex = () => {
 		if (firstBank + noOfDataToShow < bankData.length)
 			return firstBank + noOfDataToShow;
