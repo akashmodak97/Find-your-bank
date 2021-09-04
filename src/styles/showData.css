@@ -44,7 +44,7 @@
 	margin-bottom: 8px;
 	padding: 24px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
 	.footer {
 		font-size: 12px;
 	}
