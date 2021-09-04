@@ -94,3 +94,7 @@ input:disabled {
 	font-size: 24px;
 	text-align: center;
 }
+
+.rows-per-page-input {
+	width: 50px;
+}

@@ -47,6 +47,7 @@ const SearchContainer = ({
 	useEffect(() => {
 		if (searchCategory !== "") setSearchCategory("");
 		if (query !== "") setQuery("");
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [bankDataForReference]);
 
 	useEffect(() => {
@@ -82,7 +83,9 @@ const SearchContainer = ({
 									setQuery("");
 								}}
 							>
-								<option value="">--</option>
+								<option value="" disabled>
+									Select Category
+								</option>
 								<option value="bank_name">Bank Name</option>
 								<option value="ifsc">IFSC</option>
 								<option value="branch">Branch</option>

@@ -14,7 +14,6 @@ const BankDetails = ({ setDataLoading, setErrorOccurred }) => {
 	const { ifscCode } = useParams();
 	const [bankDetailsData, setBankDetailsData] = useState(false);
 	const [isFavorite, setIsFavorite] = useState(false);
-	// const [favoritesData, setFavoritesData] = useState([]);
 
 	const fetchBankDetails = async () => {
 		setDataLoading(true);
@@ -82,7 +81,6 @@ const BankDetails = ({ setDataLoading, setErrorOccurred }) => {
 			} else {
 				const bankData = bankDetailsData.filter((data) => {
 					if (data.ifsc === ifscCode) {
-						console.log(data.ifsc, ifscCode);
 						return data;
 					}
 					return false;
@@ -98,6 +96,7 @@ const BankDetails = ({ setDataLoading, setErrorOccurred }) => {
 		if (favoriteDataFromStorage) {
 			setIsFavorite(true);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [ifscCode]);
 
 	return (
